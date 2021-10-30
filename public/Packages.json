@@ -1,0 +1,76 @@
+[
+    {
+        "id":0,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500,
+        "images": "hello"
+        
+    },
+    {
+        "id":1,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":2,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":3,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":4,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":5,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":6,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":7,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":8,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":9,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":10,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    },
+    {
+        "id":11,
+        "name": "Canada",
+        "duration": "2 days - 3 night",
+        "price":2500
+    }
+]
