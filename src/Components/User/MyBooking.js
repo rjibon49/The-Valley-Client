@@ -32,7 +32,8 @@ const MyBooking = () => {
                 <thead>
                     <tr className="text-center">
                         <th scope="col-">Name</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Person</th>
+                        <th scope="col">Phone</th>
                         <th scope="col">Date</th>
                         <th scope="col">ACTION</th>
                     </tr>
@@ -41,8 +42,9 @@ const MyBooking = () => {
                 booking.map ( b =>                
                 <tbody>
                     <tr className="text-center">
-                        <td className="border border-2 col-xl-1">{b.title}</td>
-                        <td className="border border-2">{b.price}</td>
+                    <td className="border border-2 col-xl-1">{b.name}</td>
+                        <td className="border border-2">{b.person}</td>
+                        <td className="border border-2">{b.phone}</td>
                         <td className="border border-2">{b.date}</td>
                         <td><button className="btn btn-warning me-2">Update</button> 
                             <button className="btn btn-danger" onClick={ () => handleDelete(b._id)}>Delete</button>

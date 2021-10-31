@@ -14,15 +14,14 @@ const Footer = () => {
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/destinations">Destinations</Nav.Link>
-                            <Nav.Link as={Link} to="/signup">sign-In</Nav.Link>
                         </Nav>
                                     
-                        <span className="fs-3 text-white">
-                            <Link to="/"><i className="me-4 fab fa-twitter"></i></Link>
-                            <Link to="/"><i className="me-4 fab fa-facebook"></i></Link>
-                            <Link to="/"><i className="me-4 fab fa-instagram"></i></Link>
-                            <Link to="/"><i className="me-4 fab fa-youtube"></i></Link>
-                            <Link to="/"><i className="me-4 fab fa-linkedin"></i></Link>
+                        <span className="fs-3">
+                            <Link to="/"><i className="me-4 fab fa-twitter text-white"></i></Link>
+                            <Link to="/"><i className="me-4 fab fa-facebook text-white"></i></Link>
+                            <Link to="/"><i className="me-4 fab fa-instagram text-white"></i></Link>
+                            <Link to="/"><i className="me-4 fab fa-youtube text-white"></i></Link>
+                            <Link to="/"><i className="me-4 fab fa-linkedin text-white"></i></Link>
                         </span>
                 </div>
                 <hr className="bg-light" />

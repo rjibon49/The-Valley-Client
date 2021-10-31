@@ -16,21 +16,14 @@ const useFirebase = () => {
 
     const signInUsingGoogle = () => {
         setIsLoding(true);
-        signInWithPopup(auth, googleProvider)
-        .then(result => {
-            setUser(result.user);
-        })
+        return signInWithPopup(auth, googleProvider)
         .finally(() => 
         setIsLoding(false));
 
     }
     const signInUsingGithub = () => {
         setIsLoding(true);
-        signInWithPopup(auth, githubProvider)
-        .then(result => {
-            setUser(result.user);
-            console.log(result.user);
-        })
+        return signInWithPopup(auth, githubProvider)
         .finally(() => 
         setIsLoding(false));
     }
