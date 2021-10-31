@@ -3,13 +3,18 @@ import "./App.css";
 import About from "./Components/About/About";
 import Booking from "./Components/Booking/Booking";
 import AddService from "./Components/DashBoard/AddService";
+import AllBooking from "./Components/DashBoard/AllBooking";
+import AllService from "./Components/DashBoard/AllService";
 import DashBoard from "./Components/DashBoard/DashBoard";
 import DestinationDetails from "./Components/Destinations/DestinationDetails";
 import Destinations from "./Components/Destinations/Destinations";
 import Home from "./Components/Home/Home";
+import NotFound from "./Components/NotFound";
+import PrivetRout from "./Components/PrivetRoute/PrivetRoute";
 import Footer from "./Components/Shared/Footer";
 import Header from "./Components/Shared/Header";
 import Signup from "./Components/Signup/Signup";
+import MyBooking from "./Components/User/MyBooking";
 import AuthProvider from "./context/AuthProvider";
 
 function App() {
@@ -34,18 +39,30 @@ function App() {
                 <Route exact path="/destinations/:destinationId">
                   <DestinationDetails></DestinationDetails>
                 </Route>
-                <Route exact path="/booking">
+                <PrivetRout exact path="/booking">
                   <Booking></Booking>
-                </Route>
-                <Route exact path="/dashboard">
+                </PrivetRout>
+                <PrivetRout exact path="/dashboard">
                   <DashBoard></DashBoard>
-                </Route>
-                <Route exact path="/addservice">
+                </PrivetRout>
+                <PrivetRout exact path="/addservice">
                   <AddService></AddService>
-                </Route>
+                </PrivetRout>
+                <PrivetRout exact path="/allservice">
+                  <AllService></AllService>
+                </PrivetRout>
+                <PrivetRout exact path="/allbooking">
+                  <AllBooking></AllBooking>
+                </PrivetRout>
+                <PrivetRout exact path="/mybooking">
+                  <MyBooking></MyBooking>
+                </PrivetRout>
                 <Route exact path="/signup">
                   <Signup></Signup>
                 </Route>
+                <Route path="*">
+                <NotFound></NotFound>
+              </Route>
             </Switch>
           <Footer></Footer>
         </BrowserRouter>

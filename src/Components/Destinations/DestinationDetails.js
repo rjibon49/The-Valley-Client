@@ -8,16 +8,16 @@ const DestinationDetails = () => {
     const [destinationDetails, SetDestinationDetails] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${destinationId}`;
+        const url = `https://vast-basin-17966.herokuapp.com/services/${destinationId}`;
         fetch(url)
         .then ( res => res.json())
-        .then ( data => SetDestinationDetails(data));
+        .then ( data => SetDestinationDetails(data))
     }, [])
 
     const { title, day, night, image, price, description } = destinationDetails;
     return (
         <div className="container-fluid">
-            <div className="">
+            <div className="tour">
                 <img className="tour-bg" src={image} alt="" />
                 <div className="container my-5 py-5">
                     <div className="row">

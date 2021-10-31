@@ -5,7 +5,7 @@ const Destination = ({destination}) => {
     const {_id, title, day, night, image, price} = destination
     return (
         <div className="col-xl-4 col-md-4 col-sm-12 my-5">
-            <div className="">
+            <div className="destination">
                 <img className="img-thumbnail" src={image} alt="" />
                 <h5 className="text-center mt-3">{title}</h5>
                 <div className="d-flex justify-content-around">

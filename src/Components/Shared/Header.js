@@ -11,8 +11,10 @@ import {
   NavDropdown,
   Button,
 } from "react-bootstrap";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const {user, lockDown} = useAuth();
   return (
     <>
       <Navbar  expand="md" className="header-nav">
@@ -23,7 +25,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0 fs-4"
+              className="mx-auto my-2 my-lg-0 fs-4"
               style={{  }}
               navbarScroll
             >
@@ -36,21 +38,36 @@ const Header = () => {
               <Nav.Link className="ms-2 text-white" as={Link} to="/destinations">
               Destinations
               </Nav.Link>
-              <Nav.Link className="ms-2 text-white" as={Link} to="/dashboard">
+              {/* <Nav.Link className="ms-2 text-white" as={Link} to="/dashboard">
               Dashboard
-              </Nav.Link>
-              <Nav.Link className="ms-2 text-white" as={Link} to="/signup">
+              </Nav.Link> */}
+              
+              {
+                user.email ? 
+                <p></p>
+                :
+                <Nav.Link className="ms-2 text-white" as={Link} to="/signup">
               SignIn
               </Nav.Link>
-              <NavDropdown className="ms-2" title="Dashboard" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={Link} to="/addservice">Add Service</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
+              }
+              
+              <NavDropdown className="ms-2" title="user" id="navbarScrollingDropdown">
+                {
+                  user.email ? <small className="m-auto text-center" >{user.displayName}</small> :
+                        <h5 className="m-auto">{user.email}</h5>
+                }
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
+                <NavDropdown.Item className="fs-5 text-center mb-2" as={Link} to="/mybooking">My Booking</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={lockDown} className="fs-4 text-center mb-2">LogOut</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown className="ms-2" title="Dashboard" id="navbarScrollingDropdown">
+                <NavDropdown.Item className="fs-5 text-center mb-3" as={Link} to="/addservice">Add Service</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item className="fs-4 text-center mb-3" as={Link} to="/allservice">All Service</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item className="fs-4 text-center mb-3" as={Link} to="/allbooking">All Booking</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form className="d-flex">
